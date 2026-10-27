@@ -73,14 +73,13 @@ export function generateDynamicCandidatesForCustomJob(job: JobDescription): Cand
     const isOpen = i % 2 === 0 || i === 1; // 70% open to work
     const exp = Math.max(3, job.experienceRequiredYears + (i % 4) - 1);
     
-    // Skills mix
-    const skills = [...topKws.slice(0, 5)];
+    // Skills mix: top candidate has 100% must-haves, others have high overlap with slight variance
+    const skills = i === 0 
+      ? [...topKws] 
+      : [...topKws.slice(0, Math.max(3, topKws.length - (i % 2)))];
+    
     if (job.preferredKeywords.length > 0) {
       skills.push(job.preferredKeywords[i % job.preferredKeywords.length]);
-    }
-    if (i === 2) {
-      // Missing one skill for variation
-      skills.pop();
     }
     skills.push("Embedded Linux", "Git", "Agile");
 
@@ -131,36 +130,30 @@ export async function searchCandidates(config: SearchQueryConfig): Promise<Candi
 
   let candidates: CandidateProfile[] = [];
 
-  // Check if this matches one of our curated sets
-  const matchedCurated = CURATED_CANDIDATES.filter(c => {
-    // Check keyword overlap
-    const overlap = c.skills.filter(s =>
-      job.mustHaveKeywords.some(jKw => jKw.toLowerCase() === s.toLowerCase() || s.toLowerCase().includes(jKw.toLowerCase()))
+  // Check if any curated candidates have high match (score >= 80)
+  const scoredCurated = CURATED_CANDIDATES.map(c => {
+    const matchAnalysis = calculateCandidateMatchScore(
+      c.skills,
+      job.mustHaveKeywords,
+      c.location,
+      job.location,
+      c.yearsOfExperience,
+      job.experienceRequiredYears,
+      c.openToWork
     );
-    return overlap.length >= 2;
-  });
+    return {
+      ...c,
+      matchingKeywords: matchAnalysis.matching,
+      missingKeywords: matchAnalysis.missing,
+      matchScore: matchAnalysis.score
+    };
+  }).filter(c => c.matchScore >= 80);
 
-  if (matchedCurated.length >= 2) {
-    // Re-score curated candidates against the current job parameters
-    candidates = matchedCurated.map(c => {
-      const matchAnalysis = calculateCandidateMatchScore(
-        c.skills,
-        job.mustHaveKeywords,
-        c.location,
-        job.location,
-        c.yearsOfExperience,
-        job.experienceRequiredYears,
-        c.openToWork
-      );
-      return {
-        ...c,
-        matchingKeywords: matchAnalysis.matching,
-        missingKeywords: matchAnalysis.missing,
-        matchScore: matchAnalysis.score
-      };
-    });
+  if (scoredCurated.length >= 2) {
+    // If high-match curated candidates exist, use them
+    candidates = scoredCurated;
   } else {
-    // Custom or arbitrary job description entered by user!
+    // For custom or novel jobs, dynamically generate candidates tailored 100% to this JD
     candidates = generateDynamicCandidatesForCustomJob(job);
   }
 
