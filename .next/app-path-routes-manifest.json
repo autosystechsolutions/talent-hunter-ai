@@ -1,0 +1,7 @@
+{
+  "/api/generate-outreach/route": "/api/generate-outreach",
+  "/api/parse-jd/route": "/api/parse-jd",
+  "/api/search-candidates/route": "/api/search-candidates",
+  "/_not-found/page": "/_not-found",
+  "/page": "/"
+}
