@@ -64,9 +64,11 @@ export interface SearchQueryConfig {
 export interface BooleanXRayQueries {
   linkedinOpenToWork: string;
   linkedinBroadSourcing: string;
+  linkedinPublicEmails: string;
   indeedResumes: string;
   githubTechSearch: string;
   googleSearchUrlLinkedIn: string;
+  googleSearchUrlEmails: string;
   googleSearchUrlIndeed: string;
   googleSearchUrlGitHub: string;
 }

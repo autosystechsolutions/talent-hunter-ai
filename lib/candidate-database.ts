@@ -21,9 +21,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "Senior Rust engineer with 6 years experience building real-time automotive infotainment services, IPC frameworks, and high-performance HMI backends on embedded Linux. Dedicated advocate of SOLID architecture, memory safety, and TDD.",
     recentRole: "Architected Rust microservices for next-gen cockpit display controller with sub-millisecond telemetry.",
     education: "M.S. Computer Engineering, UC Berkeley",
-    email: "elena.rostova.eng@gmail.com",
-    phone: "(650) 492-8172",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Staff Software Engineer at Lucid Motors · Palo Alto, CA. Open to work on C2C and innovative automotive EV platforms. Expertise in Rust, embedded Linux, SOLID, TDD..."
   },
   {
@@ -45,9 +45,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "5+ years developing automotive audio routing, media player daemons, and vehicle diagnostics in Rust and modern C++. Strong focus on clean asynchronous API design and zero-cost abstractions.",
     recentRole: "Re-engineered media streaming daemon from legacy C++ to asynchronous Rust (tokio/embedded-hal), slashing memory footprint by 42%.",
     education: "B.S. Electrical & Computer Engineering, San Jose State University",
-    email: "m.vance.dev@proton.me",
-    phone: "(408) 715-3920",
-    contactStatus: "enriched",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Embedded Rust Developer at Rivian. Looking for new opportunities in SF Bay Area. Rust, Linux, Infotainment frameworks..."
   },
   {
@@ -69,9 +69,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "8 years developing low-level drivers, kernel modules, and user-space daemons in Rust and C++. Expert in TDD methodologies and rigorous unit testing in automotive pipelines.",
     recentRole: "Authored open-source automotive Rust CAN-FD HAL library with over 1,200 GitHub stars.",
     education: "B.Tech Computer Science, IIT Madras; M.S. Stanford University",
-    email: "karthik.subramanian@outlook.com",
-    phone: "(408) 520-9411",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...karthik-sub-embedded (Karthik Subramanian) · GitHub · Joined in 2017 · Rust automotive libraries, embedded Linux, SOLID design patterns..."
   },
 
@@ -95,9 +95,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "9 years of firmware validation excellence spanning in-cabin audio devices, Bluetooth stacks (A2DP/HFP/AVRCP), and Android/Linux infotainment rigs. Highly proficient in Wireshark packet capture, ADB shell triage, and automated Python log scrapers.",
     recentRole: "First-line triage owner for Bluetooth audio glitch fleet reports across 5,000+ test devices, driving bug root-causes into JIRA within 24 hours.",
     education: "B.S. Electronics & Communication Engineering",
-    email: "deepa.narayanan.qa@gmail.com",
-    phone: "(650) 834-1190",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Firmware QA Engineer at Foster City, CA. #OpenToWork. Expertise: Bluetooth validation, Wireshark, ADB, Python scripting, Linux logs..."
   },
   {
@@ -119,9 +119,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "8+ years validating autonomous vehicle in-cabin telemetry, passenger audio streaming, and cellular/BT gateways. Proven track record closing test coverage gaps and stabilizing robotaxi passenger experience.",
     recentRole: "Maintained hardware-in-the-loop (HIL) test benches for robotaxi media streaming and audio playback stability.",
     education: "B.S. Computer Engineering, Cal Poly SLO",
-    email: "travis.miller.eng@yahoo.com",
-    phone: "(650) 623-4481",
-    contactStatus: "enriched",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Firmware Systems Test Engineer at San Mateo, CA. Actively looking for C2C validation roles. Bluetooth, Wireshark, ADB, vehicle networking..."
   },
   {
@@ -143,9 +143,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "6 years automating and executing firmware test plans on automotive Linux and Android Automotive. Built custom Python parsers for DLT and HCI Bluetooth logs.",
     recentRole: "Automated overnight Bluetooth pairing regression test suite reducing manual cycle time from 16 hours to 45 minutes.",
     education: "M.S. Software Engineering, San Jose State University",
-    email: "sid.verma.qa@gmail.com",
-    phone: "(510) 912-7740",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Tesla QA Engineer · Infotainment & Wireless · Fremont, CA · Python, ADB, Wireshark, Linux, Bluetooth protocols..."
   },
 
@@ -169,9 +169,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "Recognized industry specialist in Car Connectivity Consortium (CCC) Digital Key Release 2 & Release 3 architectures. Deep technical expertise in UWB Time-of-Flight (ToF) ranging, BLE angle-of-arrival localization, NFC card emulation, and asymmetric cryptographic authentication.",
     recentRole: "Spearheaded CCC Digital Key 3.0 vehicle integration with Apple CarKey and Google Android Digital Key for major European and US OEMs.",
     education: "Ph.D. in Electrical & Computer Engineering, Technical University of Munich",
-    email: "alexander.brandt.auto@gmail.com",
-    phone: "(650) 332-9014",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Palo Alto, CA. Open for high-impact C2C consulting roles. CCC Digital Key, UWB, BLE, NFC, CANoe bus analysis, secure elements..."
   },
   {
@@ -193,9 +193,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "6 years hands-on experience integrating PEPS (Passive Entry Passive Start) and CCC Digital Key systems. Proficient with Vector CANoe simulation, CAPL scripting, and RF protocol analyzers for UWB anchor triangulation.",
     recentRole: "Validated multi-anchor UWB localization mesh on vehicle doors and bumpers, eliminating relay attacks and spoofing.",
     education: "M.S. Automotive Engineering, University of Michigan",
-    email: "rohan.sengupta.auto@outlook.com",
-    phone: "(408) 641-7829",
-    contactStatus: "enriched",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Vehicle Access Systems Engineer at Bosch. Sunnyvale, CA. Open to work on advanced vehicle access & CCC Digital Key..."
   },
   {
@@ -217,9 +217,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "7 years specializing in vehicle cybersecurity, Hardware Security Modules (HSMs), and smartphone-to-vehicle digital key provisioning.",
     recentRole: "Designed the certificate lifecycle and remote key revocation architecture for vehicle fleet access.",
     education: "B.S. & M.S. Computer Science, Carnegie Mellon University",
-    email: "mlzhou.security@gmail.com",
-    phone: "(650) 902-1488",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Security Firmware Engineer · Palo Alto, CA · CCC Digital Key, BLE, NFC, PKI, CANoe security analysis..."
   },
 
@@ -243,9 +243,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "10+ years dedicated to automotive cabin voice enhancement, multi-microphone beamforming arrays, and DSP Concepts Audio Weaver tuning. Deep knowledge of ALSA/PulseAudio/PipeWire drivers and ITU-T voice quality compliance.",
     recentRole: "Tuned voice recognition front-end algorithms for premier Tier-1 OEM cockpit, achieving 98.4% word recognition accuracy at 70 mph freeway speeds.",
     education: "M.S. Acoustics & Signal Processing, Stanford University",
-    email: "gabriel.rossi.dsp@gmail.com",
-    phone: "(650) 781-4209",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Principal Audio DSP Engineer at Harman · Palo Alto, CA. Open to work on contract/C2C roles. Audio Weaver, AEC, Beamforming, ALSA, C++..."
   },
   {
@@ -267,9 +267,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "7 years developing real-time embedded audio algorithms in C++ and DSP Concepts Audio Weaver. Expert in HATS (Head and Torso Simulator) acoustic tuning and spatial noise suppression.",
     recentRole: "Designed adaptive beamforming filter for ceiling-mounted microphone array in electric luxury SUV.",
     education: "M.S. Electrical & Computer Engineering, Georgia Tech",
-    email: "ananya.deshmukh.dsp@gmail.com",
-    phone: "(408) 390-1822",
-    contactStatus: "enriched",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Audio DSP Engineer at Bose. Santa Clara, CA. Seeking opportunities. Audio Weaver, AEC, VAD, Beamforming, ALSA, C++..."
   },
   {
@@ -291,9 +291,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "6 years writing low-latency audio capture pipelines, ALSA plugins, and Voice Activity Detection (VAD) algorithms for automotive speech engines.",
     recentRole: "Reduced hands-free audio latency by 18ms across Android Automotive OS audio HAL.",
     education: "B.S. Audio Engineering & Computer Science",
-    email: "julian.fischer.audio@gmail.com",
-    phone: "(408) 412-8801",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Audio Systems Engineer · San Jose, CA · C++, ALSA, Linux audio drivers, AEC, Beamforming..."
   },
 
@@ -317,9 +317,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "9 years of automotive systems engineering leadership. Master of Model-Based Systems Engineering (MBSE) in Cameo / SysML, with extensive domain expertise in Passive Entry / Passive Start (PEPS), UWB micro-localization, and Jama requirements traceability.",
     recentRole: "Led functional systems definition and ICD documentation for 3 OEM vehicle access production programs.",
     education: "M.S. Automotive Systems Engineering, University of Michigan Ann Arbor",
-    email: "vik.patil.systems@gmail.com",
-    phone: "(650) 518-9321",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Staff Systems Architect at Aptiv · Palo Alto, CA. Open to work for C2C systems leadership. Cameo SysML, Jama Connect, NFC/BLE/UWB vehicle access..."
   },
   {
@@ -341,9 +341,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "7 years structuring multi-tiered requirements and architectural models for vehicle access, power closures, and smart key fob systems. Expert in Jama Connect and DOORS lifecycle management.",
     recentRole: "Authored 450+ system requirements in Jama Connect with 100% verification coverage across HIL and in-vehicle test gates.",
     education: "B.S. Mechanical & Systems Engineering, Purdue University",
-    email: "rachel.sterling.eng@gmail.com",
-    phone: "(408) 882-6019",
-    contactStatus: "enriched",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Lead Systems Engineer at Sunnyvale, CA. Open to new challenges. Jama Connect, MBSE, Vehicle Access, BLE, UWB..."
   },
   {
@@ -365,9 +365,9 @@ export const CURATED_CANDIDATES: CandidateProfile[] = [
     summary: "6 years crafting system architectures and functional safety artifacts for automotive electronic modules. Proficient in SysML state charts, activity diagrams, and Jama traceability.",
     recentRole: "Modeled telematics control unit (TCU) behavior in Cameo SysML and managed functional verification matrices in Jama.",
     education: "M.S. Systems & Control Engineering",
-    email: "dmitri.volkov.eng@gmail.com",
-    phone: "(650) 619-3304",
-    contactStatus: "verified",
+    email: undefined,
+    phone: undefined,
+    contactStatus: "pending",
     xraySnippet: "...Senior Systems Engineer at ZF Group · Palo Alto, CA · SysML, Cameo, Jama requirements, ISO 26262, vehicle systems..."
   }
 ];

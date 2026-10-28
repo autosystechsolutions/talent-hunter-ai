@@ -309,10 +309,32 @@ async function runTestSuite() {
   });
   assert(badOutreachRes.status === 400, "Missing candidate or job returns HTTP 400");
 
-  // SECTION 7: STATIC ASSETS AND BUNDLE INTEGRITY
-  console.log("\n--- Section 7: Client Script & Asset Delivery ---");
-  const manifestRes = await fetch("http://localhost:3005/_next/static/css/fa73d243c49276b7.css");
-  assert(manifestRes.status === 200, "Main CSS stylesheet loads with HTTP 200");
+  // SECTION 7: LIVE EMAIL & DOMAIN VERIFICATION
+  console.log("\n--- Section 7: Live Email & Domain MX Verification Tests ---");
+  const emailValidRes = await fetch("http://localhost:3005/api/verify-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: "test@google.com" })
+  });
+  assert(emailValidRes.status === 200, "POST /api/verify-email returned 200");
+  const emailValidData = await emailValidRes.json();
+  assert(emailValidData.verification && emailValidData.verification.hasMxRecords === true, "Google domain has valid MX records");
+
+  const emailInvalidRes = await fetch("http://localhost:3005/api/verify-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: "bad-email-without-domain" })
+  });
+  assert(emailInvalidRes.status === 200, "Invalid email syntax handled gracefully");
+  const emailInvalidData = await emailInvalidRes.json();
+  assert(emailInvalidData.verification.isValidSyntax === false, "Detected invalid email syntax");
+
+  // SECTION 8: STATIC ASSETS AND BUNDLE INTEGRITY
+  console.log("\n--- Section 8: Client Script & Asset Delivery ---");
+  const cssMatch = homeHtml.match(/href="(\/_next\/static\/css\/[^"]+\.css)"/);
+  const cssPath = cssMatch ? cssMatch[1] : "/_next/static/css/fa73d243c49276b7.css";
+  const manifestRes = await fetch(`http://localhost:3005${cssPath}`);
+  assert(manifestRes.status === 200, `Main CSS stylesheet (${cssPath}) loads with HTTP 200`);
 
   // FINAL REPORT
   console.log("\n==================================================================");

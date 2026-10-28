@@ -125,6 +125,12 @@ export const OutreachModal: React.FC<OutreachModalProps> = ({
 
         {/* Modal Body */}
         <div className="p-6 space-y-4 overflow-y-auto flex-1">
+          {channel === "email" && !candidate.email && (
+            <div className="p-3 bg-amber-950/40 border border-amber-500/30 rounded-lg text-xs text-amber-300 leading-relaxed">
+              <span className="font-bold">⚠️ Privacy Notice:</span> {candidate.fullName}&apos;s direct personal email is protected by LinkedIn. We strongly recommend switching to the <span className="font-bold underline text-white">LinkedIn InMail</span> tab to message them directly on their profile, or use this email draft once you connect or enrich via Apollo/Hunter.
+            </div>
+          )}
+
           {channel !== "sms" && (
             <div>
               <label className="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1.5">

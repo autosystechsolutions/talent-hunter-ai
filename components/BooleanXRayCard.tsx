@@ -71,6 +71,37 @@ export const BooleanXRayCard: React.FC<BooleanXRayCardProps> = ({ queries, title
         </p>
       </div>
 
+      {/* Query 1b: Candidates with Real Public Emails (@gmail in Bio) */}
+      <div className="bg-[#161E2B] border border-emerald-500/30 rounded-lg p-3 space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+            2. Candidates with Public Email in Bio (@gmail / @yahoo)
+          </span>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => handleCopy(queries.linkedinPublicEmails, "li_emails")}
+              className="text-[11px] text-slate-300 hover:text-white bg-[#1E293B] hover:bg-[#2A384F] px-2 py-1 rounded border border-[#2B3A4F] flex items-center gap-1 transition-colors"
+            >
+              {copiedKey === "li_emails" ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+              {copiedKey === "li_emails" ? "Copied" : "Copy"}
+            </button>
+            <a
+              href={queries.googleSearchUrlEmails}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] font-bold text-[#080B0E] bg-emerald-400 hover:bg-emerald-300 px-2.5 py-1 rounded flex items-center gap-1 transition-colors"
+            >
+              Find Real Emails
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+        <p className="font-mono text-[11px] text-slate-300 bg-[#0B0F15] p-2 rounded border border-[#1A2332] break-all select-all">
+          {queries.linkedinPublicEmails}
+        </p>
+      </div>
+
       {/* Query 2: Indeed Resume Index */}
       <div className="bg-[#161E2B] border border-[#222E40] rounded-lg p-3 space-y-2">
         <div className="flex items-center justify-between">

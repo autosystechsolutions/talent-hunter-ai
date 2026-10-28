@@ -115,9 +115,9 @@ export function generateDynamicCandidatesForCustomJob(job: JobDescription): Cand
       summary: `Hands-on ${title} with ${exp}+ years of experience building and deploying production-grade systems at ${comp}. Core strength in ${topKws.slice(0, 3).join(", ")}.`,
       recentRole: `Delivered high-reliability engineering modules and system integration for next-generation vehicle platforms at ${comp}.`,
       education: `B.S. in Electrical & Computer Engineering`,
-      email: `${emailUser}.${exp}@${domains[i % domains.length]}`,
-      phone: `(650) ${300 + i * 27}-${1000 + i * 142}`,
-      contactStatus: isOpen ? "verified" : "enriched",
+      email: undefined,
+      phone: undefined,
+      contactStatus: "pending",
       xraySnippet: `...${fullName} · ${title} at ${comp} · ${loc} · ${isOpen ? "#OpenToWork" : ""} · Skills: ${topKws.slice(0, 4).join(", ")}...`
     });
   }

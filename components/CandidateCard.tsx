@@ -13,7 +13,9 @@ import {
   XCircle, 
   Copy, 
   Check, 
-  Send
+  Send,
+  Lock,
+  Search
 } from "lucide-react";
 
 interface CandidateCardProps {
@@ -163,16 +165,33 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
             <button
               onClick={() => copyToClipboard(candidate.email!, "email")}
               className="inline-flex items-center gap-1.5 text-xs bg-[#161E2B] hover:bg-[#1E293B] text-slate-300 hover:text-white px-2.5 py-1 rounded-md border border-[#243144] transition-colors"
-              title="Click to copy email"
+              title="Click to copy verified email"
             >
               <Mail className="w-3 h-3 text-[#2BA8FF]" />
               <span className="font-mono text-[11px]">{candidate.email}</span>
               {copiedEmail ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3 text-slate-500" />}
             </button>
           ) : (
-            <span className="text-[11px] text-slate-500 italic flex items-center gap-1">
-              <Mail className="w-3 h-3" /> Email private (Use InMail)
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span 
+                className="inline-flex items-center gap-1.5 text-[11px] text-slate-400 bg-[#161E2B] px-2.5 py-1 rounded-md border border-[#222E40]"
+                title="LinkedIn hides personal emails to prevent scraping. Reach candidate directly via 1-Click LinkedIn InMail or search public bio."
+              >
+                <Lock className="w-3 h-3 text-amber-400" />
+                Email Private on LinkedIn
+              </span>
+              <a
+                href={`https://www.google.com/search?q=${encodeURIComponent(`"${candidate.fullName}" "${candidate.currentCompany}" ("@gmail.com" OR "@yahoo.com" OR "email" OR "contact")`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[11px] text-[#2BA8FF] hover:text-[#58BFFF] hover:underline bg-[#161E2B]/50 px-2 py-1 rounded border border-[#1E293B]"
+                title="Search Google for any publicly posted email by this candidate"
+              >
+                <Search className="w-2.5 h-2.5" />
+                Find Public Email
+                <ExternalLink className="w-2.5 h-2.5" />
+              </a>
+            </div>
           )}
 
           {candidate.phone && (
